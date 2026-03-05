@@ -40,7 +40,7 @@ jobs:
 
       - name: Criar pasta dist
         run: |
-          mkdir build
+          mkdir dist
           cp *.html *.css build/
 
       - name: Upload artefato
@@ -66,7 +66,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site
-          path: dist
+          path: build
 
       - name: Configurar Pages
         uses: actions/configure-pages@v4
